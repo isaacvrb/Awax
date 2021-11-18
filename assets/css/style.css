@@ -93,7 +93,7 @@ header{
     width: 1000vw;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
-    transition: all 2s;
+    transition: all 1s;
 }
 .banner .slide{
     width: 100vw;
