@@ -47,10 +47,8 @@ let ots3 = document.querySelector('#ots3');
 let stn1 = document.querySelector('#stn1');
 let stn2 = document.querySelector('#stn2');
 let stn3 = document.querySelector('#stn3');
-let timer2;
 
 function ourTeamBt1() {
-    clearInterval(timer2);
     otb2.classList.remove('active');
     otb3.classList.remove('active');
     otb1.classList.add('active');
@@ -60,10 +58,8 @@ function ourTeamBt1() {
     stn1.innerHTML = 'Jane Doe';
     stn2.innerHTML = 'Mike Chiller';
     stn3.innerHTML = 'Anna Jhons';
-    timer2 = setInterval(ourTeamBt2 , 5000);
 }
 function ourTeamBt2() {
-    clearInterval(timer2);
     otb1.classList.remove('active');
     otb3.classList.remove('active');
     otb2.classList.add('active');
@@ -73,10 +69,8 @@ function ourTeamBt2() {
     stn1.innerHTML = 'Mike Chiller';
     stn2.innerHTML = 'Jhon Doe';
     stn3.innerHTML = 'Jane Doe';
-    timer2 = setInterval(ourTeamBt3 , 5000);
 }
 function ourTeamBt3() {
-    clearInterval(timer2);
     otb1.classList.remove('active');
     otb2.classList.remove('active');
     otb3.classList.add('active');
@@ -86,7 +80,6 @@ function ourTeamBt3() {
     stn1.innerHTML = 'Jhon Doe';
     stn2.innerHTML = 'Anna Jhons';
     stn3.innerHTML = 'Mike Chiller';
-    timer2 = setInterval(ourTeamBt1 , 5000);
 }
 
 let hcb1 = document.querySelector('#hcb1');
