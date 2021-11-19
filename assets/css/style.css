@@ -420,6 +420,10 @@ header{
     justify-content: center;
     align-items: center;
 }
+.section-happy--avatar{
+    width: 150px;
+    height: auto;
+}
 .section-happy--name{
     text-transform: uppercase;
     font-weight: 600;

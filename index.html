@@ -10,7 +10,7 @@
         <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
         
     </head>
-    <body onload="primeiroSlide()">
+    <body onload="primeiroSlide(), ourTeamBt1(), happyClients1()">
         <header>
             <div class="header">
                 <div class="logo">
@@ -252,11 +252,11 @@
                     <div class="section-desc">Our Co-workers</div>
                     <div class="section-body">
                         <div class="section-team">
-                            <div class="sliders" style="margin-left:0;">
+                            <div class="sliders" >
                                 <div class="slide">
-                                    <div class="slidearea">
-                                        <img src="media/mulher1.png" class="section-team--avatar"/>
-                                        <div class="section-team--name">Jane Doe</div>
+                                    <div  class="slidearea">
+                                        <img id="ots1" src="media/mulher1.png" class="section-team--avatar"/>
+                                        <div id="stn1" class="section-team--name">Jane Doe</div>
                                         <div class="section-team--role">Master Mind</div>
                                         <div class="section-team--social">
                                             <a href=""><img src="assets/images/facebook.png"/> </a>
@@ -266,8 +266,8 @@
                                     </div>
                                 </div><div class="slide">
                                     <div class="slidearea">
-                                        <img src="media/homem1.png" class="section-team--avatar"/>
-                                        <div class="section-team--name">Mike Chiller</div>
+                                        <img id="ots2" src="media/homem1.png" class="section-team--avatar"/>
+                                        <div id="stn2" class="section-team--name">Mike Chiller</div>
                                         <div class="section-team--role">Creative Head</div>
                                         <div class="section-team--social">
                                             <a href=""><img src="assets/images/facebook.png"/> </a>
@@ -277,8 +277,8 @@
                                     </div>
                                 </div><div class="slide">
                                     <div class="slidearea">
-                                        <img src="media/mulher2.png" class="section-team--avatar"/>
-                                        <div class="section-team--name">Anna Jhons</div>
+                                        <img id="ots3" src="media/mulher2.png" class="section-team--avatar"/>
+                                        <div id="stn3" class="section-team--name">Anna Jhons</div>
                                         <div class="section-team--role">Technical Lead</div>
                                         <div class="section-team--social">
                                             <a href=""><img src="assets/images/facebook.png"/> </a>
@@ -290,9 +290,9 @@
                             </div>
                         </div>
                         <div class="sliders-pointers">
-                            <div class="pointer active"></div>
-                            <div class="pointer"></div>
-                            <div class="pointer"></div>
+                            <div id="otb1" onclick="ourTeamBt1()" class="pointer active"></div>
+                            <div id="otb2" onclick="ourTeamBt2()" class="pointer"></div>
+                            <div id="otb3" onclick="ourTeamBt3()" class="pointer"></div>
                         </div>
                     </div>
                 </div>
@@ -304,9 +304,9 @@
                 <div class="section-body">
                     <div class="section-happy">
                         <div class="photo-area">
-                            <img src="media/homem2.png"/>
+                            <img id="hci" class="section-happy--avatar" src="media/homem2.png"/>
                         </div>
-                        <div class="section-happy--name">Jhon Doe</div>
+                        <div id="shn" class="section-happy--name">Jhon Doe</div>
                         <div class="section-happy--rolle">Heard of PR Departaments</div>
                         <div class="section-happy--quote">
                             <img src="assets/images/quote.png"/>
@@ -316,9 +316,9 @@
                              which don't look even slightly believable.</div>
                     </div>
                     <div class="sliders-pointers">
-                        <div class="pointer active"></div>
-                        <div class="pointer"></div>
-                        <div class="pointer"></div>
+                        <div id="hcb1" onclick="happyClients1()" class="pointer active"></div>
+                        <div id="hcb2" onclick="happyClients2()" class="pointer"></div>
+                        <div id="hcb3" onclick="happyClients3()" class="pointer"></div>
                     </div>
                 </div>
             </section>
