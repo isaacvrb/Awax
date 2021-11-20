@@ -94,7 +94,7 @@ function happyClients1(){
     hcb2.classList.remove('active');
     hcb3.classList.remove('active');
     hcb1.classList.add('active');
-    timer2 = setInterval(happyClients2 , 5000);
+    timer2 = setInterval(happyClients2 , 7000);
 
 
 }
@@ -104,7 +104,7 @@ function happyClients2(){
     hcb1.classList.remove('active');
     hcb3.classList.remove('active');
     hcb2.classList.add('active');
-    timer2 = setInterval(happyClients3 , 5000);
+    timer2 = setInterval(happyClients3 , 7000);
 }
 function happyClients3(){
     clearInterval(timer2)
@@ -112,5 +112,5 @@ function happyClients3(){
     hcb1.classList.remove('active');
     hcb2.classList.remove('active');
     hcb3.classList.add('active');
-    timer2 = setInterval(happyClients1 , 5000);
+    timer2 = setInterval(happyClients1 , 7000);
 }

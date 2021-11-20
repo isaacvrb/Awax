@@ -1104,6 +1104,9 @@ header{
         margin-left: 30px;
     }
 
+    #brading, #adverts, #misc{
+        display: none;
+    }
     .section-projects--photos {
         width: 320px;
     }
