@@ -1,4 +1,7 @@
 /* GENERAL */   
+html{
+    scroll-behavior: smooth;
+}
 *{
     margin: 0;
     padding: 0;
@@ -190,7 +193,6 @@ header{
 .default.dark .section-body{
     color: #fff;
 }
-
 
 /* CSS DE ÁREAS ESPECÍFICAS */
 
