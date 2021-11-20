@@ -82,35 +82,35 @@ function ourTeamBt3() {
     stn3.innerHTML = 'Mike Chiller';
 }
 
+let sbc = document.querySelector('#slidersBannerClients');
 let hcb1 = document.querySelector('#hcb1');
 let hcb2 = document.querySelector('#hcb2');
 let hcb3 = document.querySelector('#hcb3');
-let timer3;
+let timer2;
 
-function happyClients1() {
-    clearInterval(timer3);
+function happyClients1(){
+    clearInterval(timer2)
+    sbc.style.marginLeft = "0";
     hcb2.classList.remove('active');
     hcb3.classList.remove('active');
     hcb1.classList.add('active');
-    document.querySelector('#hci').setAttribute('src', 'media/homem2.png');
-    document.querySelector('#shn').innerHTML = 'Jhon Doe';
-    timer3 = setInterval(happyClients2 , 5000);
+    timer2 = setInterval(happyClients2 , 5000);
+
+
 }
-function happyClients2() {
-    clearInterval(timer3);
+function happyClients2(){
+    clearInterval(timer2)
+    sbc.style.marginLeft = "-100vw";
     hcb1.classList.remove('active');
     hcb3.classList.remove('active');
     hcb2.classList.add('active');
-    document.querySelector('#hci').setAttribute('src', 'media/homem1.png');
-    document.querySelector('#shn').innerHTML = 'Mike Chiller';
-    timer3 = setInterval(happyClients3 , 5000);
+    timer2 = setInterval(happyClients3 , 5000);
 }
-function happyClients3() {
-    clearInterval(timer3);
+function happyClients3(){
+    clearInterval(timer2)
+    sbc.style.marginLeft = "-200vw";
     hcb1.classList.remove('active');
     hcb2.classList.remove('active');
     hcb3.classList.add('active');
-    document.querySelector('#hci').setAttribute('src', 'media/mulher1.png');
-    document.querySelector('#shn').innerHTML = 'Jane Doe';
-    timer3 = setInterval(happyClients1 , 5000);
+    timer2 = setInterval(happyClients1 , 5000);
 }

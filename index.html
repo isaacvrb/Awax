@@ -301,26 +301,61 @@
             <section class="default light">
                 <div class="section-title">Happy Clients</div>
                 <div class="section-desc">Clients Reviews</div>
-                <div class="section-body">
-                    <div class="section-happy">
-                        <div class="photo-area">
-                            <img id="hci" class="section-happy--avatar" src="media/homem2.png"/>
+                <div id="slidersBannerClients" class="sliders-happy-clients"  style="margin-left: 0">
+                    <div class="slide-happy-clients">
+                        <div class="slidearea-happy-clients">
+                            <div class="photo-area">
+                                <img id="hci" class="section-happy--avatar" src="media/homem2.png"/>
+                            </div>
+                            <div id="shn" class="section-happy--name">Jhon Doe</div>
+                            <div class="section-happy--rolle">Heard of PR Departaments</div>
+                            <div class="section-happy--quote">
+                                <img src="assets/images/quote.png"/>
+                            </div>
+                            <div class="section-happy--descrip">There are many variations of passages of Lorem Ipsum available,
+                                but the majority have suffered alteration in some form, by injected humour, or randomised words 
+                                which don't look even slightly believable.
+                            </div>
                         </div>
-                        <div id="shn" class="section-happy--name">Jhon Doe</div>
-                        <div class="section-happy--rolle">Heard of PR Departaments</div>
-                        <div class="section-happy--quote">
-                            <img src="assets/images/quote.png"/>
-                        </div>
-                        <div class="section-happy--descrip">There are many variations of passages of Lorem Ipsum available,
-                             but the majority have suffered alteration in some form, by injected humour, or randomised words 
-                             which don't look even slightly believable.</div>
                     </div>
+                    <div class="slide-happy-clients">
+                        <div class="slidearea-happy-clients">
+                            <div class="photo-area">
+                                <img id="hci" class="section-happy--avatar" src="media/homem1.png"/>
+                            </div>
+                            <div id="shn" class="section-happy--name">Mike Chiller</div>
+                            <div class="section-happy--rolle">Creative Head</div>
+                            <div class="section-happy--quote">
+                                <img src="assets/images/quote.png"/>
+                            </div>
+                            <div class="section-happy--descrip">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took 
+                                a galley of type.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-happy-clients">
+                        <div class="slidearea-happy-clients">
+                            <div class="photo-area">
+                                <img id="hci" class="section-happy--avatar" src="media/mulher1.png"/>
+                            </div>
+                            <div id="shn" class="section-happy--name">Jane Doe</div>
+                            <div class="section-happy--rolle">Master Mind</div>
+                            <div class="section-happy--quote">
+                                <img src="assets/images/quote.png"/>
+                            </div>
+                            <div class="section-happy--descrip">It is a long established fact that a reader will be distracted by the readable 
+                                content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal 
+                                distribution.
+                            </div>
+                        </div>
+                    </div>
+                </div>
                     <div class="sliders-pointers">
                         <div id="hcb1" onclick="happyClients1()" class="pointer active"></div>
                         <div id="hcb2" onclick="happyClients2()" class="pointer"></div>
                         <div id="hcb3" onclick="happyClients3()" class="pointer"></div>
                     </div>
-                </div>
             </section>
 
             <section class="default white">
@@ -462,11 +497,6 @@
                                             </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="sliders-pointers">
-                                <div class="pointer active"></div>
-                                <div class="pointer"></div>
-                                <div class="pointer"></div>
                             </div>
                             <a href="" class="button">Get in touch</a>
                         </div>
@@ -623,7 +653,7 @@
                         <div class="footer-area-3">
                             <div class="footer-area-form">
                                 <div class="footer-area-input">
-                                    <input type="text" name="text" value="Email to subscribe" onfocus="value=''"/>
+                                    <input type="text" name="text" placeholder="Email to subscribe"/>
                                 </div>
                                 <a href="" class="button">Subscribe</a>
                             </div>
