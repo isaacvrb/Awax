@@ -10,7 +10,7 @@
         <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
         
     </head>
-    <body onload="primeiroSlide(), ourTeamBt1(), happyClients1()">
+    <body onload="mudarSlide(1), happySliders(1)">
         <header>
             <div class="header">
                 <div class="logo">
@@ -60,9 +60,9 @@
                     </div>
                 </div>
                 <div class="sliders-pointers">
-                    <div id="sp1" class="pointer active" onclick="primeiroSlide()"></div>
-                    <div id="sp2" class="pointer" onclick="segundoSlide()"></div>
-                    <div id="sp3" class="pointer" onclick="terceiroSlide()"></div>
+                    <div id="sp1" class="pointer active" onclick="mudarSlide(1)"></div>
+                    <div id="sp2" class="pointer" onclick="mudarSlide(2)"></div>
+                    <div id="sp3" class="pointer" onclick="mudarSlide(3)"></div>
                 </div>
             </section>
 
@@ -290,9 +290,9 @@
                             </div>
                         </div>
                         <div class="sliders-pointers">
-                            <div id="otb1" onclick="ourTeamBt1()" class="pointer active"></div>
-                            <div id="otb2" onclick="ourTeamBt2()" class="pointer"></div>
-                            <div id="otb3" onclick="ourTeamBt3()" class="pointer"></div>
+                            <div id="otb1" class="pointer active"></div>
+                            <div id="otb2" class="pointer"></div>
+                            <div id="otb3" class="pointer"></div>
                         </div>
                     </div>
                 </div>
@@ -352,9 +352,9 @@
                     </div>
                 </div>
                     <div class="sliders-pointers">
-                        <div id="hcb1" onclick="happyClients1()" class="pointer active"></div>
-                        <div id="hcb2" onclick="happyClients2()" class="pointer"></div>
-                        <div id="hcb3" onclick="happyClients3()" class="pointer"></div>
+                        <div id="hcb1" onclick="happySliders(1)" class="pointer active"></div>
+                        <div id="hcb2" onclick="happySliders(2)" class="pointer"></div>
+                        <div id="hcb3" onclick="happySliders(3)" class="pointer"></div>
                     </div>
             </section>
 

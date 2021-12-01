@@ -5,112 +5,102 @@ function menuTogger(){
         document.querySelector('nav').style.display = 'flex';
     }
 }
-let slidersBanner = document.querySelector('#slidersBanner');
-let sp1 = document.querySelector('#sp1');
-let sp2 = document.querySelector('#sp2');
-let sp3 = document.querySelector('#sp3');
+const c = (el)=>document.querySelector(el);
 let timer;
 
-function primeiroSlide(){
+const sps = [c('#sp1'),c('#sp2'),c('#sp3')];
+
+function mudarSlide(n){
     clearInterval(timer)
-    slidersBanner.style.marginLeft = "0";
-    sp2.classList.remove('active');
-    sp3.classList.remove('active');
-    sp1.classList.add('active');
-    timer = setInterval(segundoSlide , 5000);
+    c('#slidersBanner').style.marginLeft =  `${100 -(n * 100)}vw`;
 
+    const atual = sps[n-1];
 
-}
-function segundoSlide(){
-    clearInterval(timer)
-    slidersBanner.style.marginLeft = "-100vw";
-    sp1.classList.remove('active');
-    sp3.classList.remove('active');
-    sp2.classList.add('active');
-    timer = setInterval(terceiroSlide , 5000);
-}
-function terceiroSlide(){
-    clearInterval(timer)
-    slidersBanner.style.marginLeft = "-200vw";
-    sp1.classList.remove('active');
-    sp2.classList.remove('active');
-    sp3.classList.add('active');
-    timer = setInterval(primeiroSlide , 5000);
+    sps.forEach((sp) => {
+        if (sp !== atual) {
+            sp.classList.remove('active')
+        } else if (!atual.classList.contains('active')) {
+            atual.classList.add('active'); 
+        }
+    })
+
+    timer = setInterval(() => {
+        if (sps.length === n ){
+            mudarSlide(1);
+        } else {
+            mudarSlide(n+1)
+        }
+    }, 5000);
 }
 
-let otb1 = document.querySelector('#otb1');
-let otb2 = document.querySelector('#otb2');
-let otb3 = document.querySelector('#otb3');
-let ots1 = document.querySelector('#ots1');
-let ots2 = document.querySelector('#ots2');
-let ots3 = document.querySelector('#ots3');
-let stn1 = document.querySelector('#stn1');
-let stn2 = document.querySelector('#stn2');
-let stn3 = document.querySelector('#stn3');
+c('#otb1').addEventListener('click', ()=>{
 
-function ourTeamBt1() {
-    otb2.classList.remove('active');
-    otb3.classList.remove('active');
-    otb1.classList.add('active');
-    ots1.setAttribute('src', 'media/mulher1.png');
-    ots2.setAttribute('src', 'media/homem1.png');
-    ots3.setAttribute('src', 'media/mulher2.png');
-    stn1.innerHTML = 'Jane Doe';
-    stn2.innerHTML = 'Mike Chiller';
-    stn3.innerHTML = 'Anna Jhons';
-}
-function ourTeamBt2() {
-    otb1.classList.remove('active');
-    otb3.classList.remove('active');
-    otb2.classList.add('active');
-    ots1.setAttribute('src', 'media/homem1.png');
-    ots2.setAttribute('src', 'media/homem2.png');
-    ots3.setAttribute('src', 'media/mulher1.png');
-    stn1.innerHTML = 'Mike Chiller';
-    stn2.innerHTML = 'Jhon Doe';
-    stn3.innerHTML = 'Jane Doe';
-}
-function ourTeamBt3() {
-    otb1.classList.remove('active');
-    otb2.classList.remove('active');
-    otb3.classList.add('active');
-    ots1.setAttribute('src', 'media/homem2.png');
-    ots2.setAttribute('src', 'media/mulher2.png');
-    ots3.setAttribute('src', 'media/homem1.png');
-    stn1.innerHTML = 'Jhon Doe';
-    stn2.innerHTML = 'Anna Jhons';
-    stn3.innerHTML = 'Mike Chiller';
-}
+    c('#otb2').classList.remove('active');
+    c('#otb3').classList.remove('active');
+    c('#otb1').classList.add('active');
 
-let sbc = document.querySelector('#slidersBannerClients');
-let hcb1 = document.querySelector('#hcb1');
-let hcb2 = document.querySelector('#hcb2');
-let hcb3 = document.querySelector('#hcb3');
+    c('#ots1').setAttribute('src', 'media/mulher1.png');
+    c('#ots2').setAttribute('src', 'media/homem1.png');
+    c('#ots3').setAttribute('src', 'media/mulher2.png');
+
+    c('#stn1').innerHTML = 'Jane Doe';
+    c('#stn2').innerHTML = 'Mike Chiller';
+    c('#stn3').innerHTML = 'Anna Jhons';
+
+});
+
+c('#otb2').addEventListener('click', ()=>{
+    c('#otb1').classList.remove('active');
+    c('#otb3').classList.remove('active');
+    c('#otb2').classList.add('active');
+
+    c('#ots1').setAttribute('src', 'media/homem1.png');
+    c('#ots2').setAttribute('src', 'media/homem2.png');
+    c('#ots3').setAttribute('src', 'media/mulher1.png');
+
+    c('#stn1').innerHTML = 'Mike Chiller';
+    c('#stn2').innerHTML = 'Jhon Doe';
+    c('#stn3').innerHTML = 'Jane Doe';
+});
+
+c('#otb3').addEventListener('click', ()=>{
+    c('#otb1').classList.remove('active');
+    c('#otb2').classList.remove('active');
+    c('#otb3').classList.add('active');
+
+    c('#ots1').setAttribute('src', 'media/homem2.png');
+    c('#ots2').setAttribute('src', 'media/mulher2.png');
+    c('#ots3').setAttribute('src', 'media/homem1.png');
+
+    c('#stn1').innerHTML = 'Jhon Doe';
+    c('#stn2').innerHTML = 'Anna Jhons';
+    c('#stn3').innerHTML = 'Mike Chiller';
+});
+
+const hcs = [c('#hcb1'), c('#hcb2'), c('#hcb3')]
 let timer2;
 
-function happyClients1(){
+function happySliders(n){
     clearInterval(timer2)
-    sbc.style.marginLeft = "0";
-    hcb2.classList.remove('active');
-    hcb3.classList.remove('active');
-    hcb1.classList.add('active');
-    timer2 = setInterval(happyClients2 , 7000);
 
+    c('#slidersBannerClients').style.marginLeft = `${100 - (n * 100)}vw`;
 
-}
-function happyClients2(){
-    clearInterval(timer2)
-    sbc.style.marginLeft = "-100vw";
-    hcb1.classList.remove('active');
-    hcb3.classList.remove('active');
-    hcb2.classList.add('active');
-    timer2 = setInterval(happyClients3 , 7000);
-}
-function happyClients3(){
-    clearInterval(timer2)
-    sbc.style.marginLeft = "-200vw";
-    hcb1.classList.remove('active');
-    hcb2.classList.remove('active');
-    hcb3.classList.add('active');
-    timer2 = setInterval(happyClients1 , 7000);
-}
+    const hcAtual = hcs[n-1];
+
+    hcs.forEach((hc)=>{
+        if (hc !== hcAtual) {
+            hc.classList.remove('active')
+        } else if (!hcAtual.classList.contains('active')) {
+            hcAtual.classList.add('active');
+        }
+    });
+    
+    timer2 = setInterval(() => {
+        if (hcs.length === n ){
+            happySliders(1);
+        } else {
+            happySliders(n+1)
+        }
+    } , 7000);
+
+};
